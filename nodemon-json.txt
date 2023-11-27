@@ -1,0 +1,5 @@
+Foi criado o nodemon.json, com aqueles códigos padrões conforme documentação do Nodemon para que ele,
+ao executar o node, ele leia o Sucrase junto (ou antes) do Nodemon.
+
+toda vez qur foi executar o nodemon ele vai registrar o sucrase; vai ver o que o sucrase faz
+(ele le essa sintaxe de "import" e "export default")
