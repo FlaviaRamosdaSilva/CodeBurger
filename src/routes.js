@@ -1,9 +1,8 @@
 import { Router } from "express";
+import UserController from "./App/Controllers/UserController";
 
 const routes = new Router(); // importado conforme a documentação do Express
 
-routes.get("/", (_, response) => {
-  return response.json({ message: "Hello Word" }); // primeira rota para dar uma mensagem de sucesso na tela
-});
+routes.post("/users", UserController.store)
 
 export default routes;
