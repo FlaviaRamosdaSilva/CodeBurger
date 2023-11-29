@@ -25,6 +25,10 @@ class User extends Model { // extends = estendendo a class model dentro da class
         })
         return this
     }
+
+    checkPassword(password){ //aqui o bcrypt nos ajuda a comparar a senha enviada pelo usuário com a senha criptografada
+       return bcrypt.compare(password, this.password_hash) //aqui ele vai me retornar true caso as senhas batem e false caso as senhas não batem
+    }
 }
 
 export default User
