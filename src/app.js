@@ -1,6 +1,7 @@
 import express from "express";
 import routes from "./routes";
 import './database'
+import { resolve } from 'path'
 
 class App {
   constructor() {
@@ -11,8 +12,11 @@ class App {
 
   middlewares() {
     this.app.use(express.json());
+    this.app.use('/product-file', express.static(resolve(__dirname, "..", "uploads")))
+  //quando alguem acessar a rota productfile vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
   }
 
+  
   routes() {
     this.app.use(routes); // use é utilizado de acordo com a documentação do express que pede isso
   }
