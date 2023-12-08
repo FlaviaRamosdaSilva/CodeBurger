@@ -1,5 +1,7 @@
 import * as Yup from 'yup'
 import User from "../models/User"
+import Jwt  from 'jsonwebtoken'
+import auth from '../../config/auth'
 
 class SessionController{
     async store(request, response) {
@@ -33,6 +35,8 @@ class SessionController{
             email,
             name: user.name,
             admin: user.admin,
+            token: Jwt.sign({ id: user.id }, auth.secret, {expiresIn: auth.expiresIn})
+            // O token novo precisa de três parâmetros: 1) dado personalizado (colocamos o ID do usuário); 2) string única, gerada pelo MD5 3) quanto tempo o usuário pode ficar logado, em quanto tempo ele  expirará 
         })
     }
 }

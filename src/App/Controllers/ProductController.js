@@ -27,12 +27,15 @@ class ProductController {
             category,
             path,
         });
-
+        
         return response.json( product )
     }
 
     async index (request, response){
         const products = await Product.findAll() //procure todos os produtos dentro dessa variavel
+
+        //console.log(request.userId)
+
         return response.json(products)  // retorna todos os produtos
     }
 
