@@ -5,7 +5,7 @@ class Product extends Model {
         super.init({  //campo Id é gerado automaticamente por isso não está aqui
             name: Sequelize.STRING,
             price: Sequelize.INTEGER,
-            category: Sequelize.STRING,
+            // category: Sequelize.STRING, // excluímos este item e para fazer o relacionamento desse item com outra tabela 
             path: Sequelize.STRING,
             url: {
                 type: Sequelize.VIRTUAL, //campo virtual não será gravado
@@ -17,6 +17,13 @@ class Product extends Model {
         {
             sequelize,
         })
+        return this
+    }
+
+    static associate(models){ // reacionamento, 1 produto para 1 categoria
+        this.belongsTo(models.Category, { foreignKey: 'category_id', as: 'category'}) // belongsto=pertence  // pertence ao model de category,
+        // a chave estrangeira (coluna) que no caso tem na minha tabela se chama "category_id" mas vamos chama-la de 'category'
+        //além disso precisamos avisar o index.js (database) sobre o relacionamento
     }
 }
 
