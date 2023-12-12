@@ -27,5 +27,8 @@ routes.post("/categories", CategoryController.store) //nesta rota vamos criar um
 routes.get('/categories', CategoryController.index) // rota de get para mostrar todas as categorias 
 
 routes.post("/orders", OrderController.store) //nesta rota vamos criar uma nova order, novo pedido
+routes.get("/orders", OrderController.index) // rota get para retornar todos os pedidos,orders, criados.
+routes.put("/orders/:id", OrderController.update) // rota put para alterar o status de um id expecífico.
+
 
 export default routes;

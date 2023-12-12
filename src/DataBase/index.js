@@ -25,6 +25,6 @@ class Database {
     mongo(){ // fazendo a conexão com o MongoDb com a ajuda do mongoose
         this.mongoConnection = mongoose.connect('mongodb://localhost:27017/codeburger') 
     } // a documentação do mongo pede que seja assim 'mongodb://localhost' + porta + o nome do banco de dados
-}
+} //baixamos o MongoDB Compass para visualizar os dados do banco de dados do MongoDB; ele já achou o code burger conforme feito acima
 
 export default new Database() //já vai instanciado
