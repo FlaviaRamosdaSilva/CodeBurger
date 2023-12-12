@@ -7,6 +7,7 @@ import SessionController from "./App/Controllers/SessionController";
 import ProductController from "./App/Controllers/ProductController";
 import CategoryController from "./App/Controllers/CategoryController";
 import authMiddleware from "./App/middleware/auth"; // importando o Middleware de autenticação
+import OrderController from "./App/Controllers/OrderController";
 
 const upload = multer(multerConfig) // criamos a variável com o Multer + config que criamos ao usar o Multer e vamos usa-la na rota dos produtos
 
@@ -24,5 +25,7 @@ routes.get('/products', ProductController.index) // rota de get para mostrar tod
 
 routes.post("/categories", CategoryController.store) //nesta rota vamos criar uma nova categoria
 routes.get('/categories', CategoryController.index) // rota de get para mostrar todas as categorias 
+
+routes.post("/orders", OrderController.store) //nesta rota vamos criar uma nova order, novo pedido
 
 export default routes;

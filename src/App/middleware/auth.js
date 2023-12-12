@@ -18,6 +18,7 @@ if(!authToken) {
             }
                 // se não der erro, vai retornar o id do usuário, mais tarde vamos usar isso
         request.userId = decoded.id
+        request.userName = decoded.name // adicionamos este item para que possamos buscar dentro do token o id e name de usuário, no order;
 
             return next() // coloca para renderizar o restante
         })
