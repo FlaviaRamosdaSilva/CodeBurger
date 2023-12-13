@@ -2,6 +2,7 @@ import * as Yup from 'yup'
 import Product from '../models/Product'
 import Category from '../models/Category'
 import Order from '../schemas/Order'
+import User from '../models/User'
 
 class OrderController{
     async store(request, response){
@@ -87,6 +88,12 @@ class OrderController{
     } catch (err) {
         return response.status(400).json({error: err.errors})
     }
+
+        // verficando se a pessoa que está logado é o admin:
+        const { admin: isAdmin } = await User.findByPk(request.userId) // Ele vai pegar as informações de userid dentro do token e vai pegar a informação admin que tem dentre as informações do usuário (true ou false)
+        if(!isAdmin){
+            return response.status(401).json()
+        }
 
         const { id } = request.params // vamos pegar o iD da url 
         const { status } = request.body // vamos pegar o novo status do body (já verificado acima)

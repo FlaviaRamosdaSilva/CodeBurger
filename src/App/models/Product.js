@@ -7,6 +7,7 @@ class Product extends Model {
             price: Sequelize.INTEGER,
             // category: Sequelize.STRING, // excluímos este item e para fazer o relacionamento desse item com outra tabela 
             path: Sequelize.STRING,
+            offer: Sequelize.BOOLEAN,
             url: {
                 type: Sequelize.VIRTUAL, //campo virtual não será gravado
                 get(){ //mas quando der um get ele vai trazer a url e mostrar a imagem

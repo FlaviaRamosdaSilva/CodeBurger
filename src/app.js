@@ -13,7 +13,9 @@ class App {
   middlewares() {
     this.app.use(express.json());
     this.app.use('/product-file', express.static(resolve(__dirname, "..", "uploads")))
-  //quando alguem acessar a rota productfile vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
+    //quando alguem acessar a rota productfile vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
+    this.app.use('/category-file', express.static(resolve(__dirname, "..", "uploads")))
+    //quando alguem acessar a rota category-file vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
   }
 
   
