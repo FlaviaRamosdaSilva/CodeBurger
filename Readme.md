@@ -9,7 +9,7 @@
 <p>Concluí a primeira parte do backend.</p>
 <br>
 <br>
-<ul> Dados relevantes:<ul>
+<ul> Dados relevantes:</ul>
 <li>Utilizei Nodemon, Sucrase, ESlint, Prettier;</li>
 <li>Padrão da arquitetura utilizada é MVC</li>
 <li>Realizei uma API REST</li>
@@ -20,16 +20,18 @@
 <li>Utilizado a biblioteca YUP para padronização e validação dos dados do usuário</li>
 <li>Utilizado a biblioteca Bcrypt para criptografia da senha do usuário dentro do banco de dados</li>
 <li>Biblioteca Multer para auxiliar no upload de imagens dentro do banco de dados</li>
-<li></li>
-
-<p>Realizando a segunda parte do backend.</p>
+<br>
+  <br>
+<p>Concluída a segunda parte do backend.</p>
 <br>
 <br>
-<ul> Dados relevantes:<ul>
+<ul> Dados relevantes:</ul>
 <li>Aprendi sobre conceito de JWT e como configurar o token do usuário para verificação ao acessar algumas páginas</li>
 <li>Realizamos o relacionamento entre tabelas, já que estamos utiizando o PostgreSQL</li>
 <li>Aprendi a realizar a excusão e inserção de uma nova coluna dentro da tabela</li>
 <li>Atualmente inserindo o MongoDB para o item de pedidos</li>
+<br>
+<br>
+<p>O FrontEnd esta em outro repositório</p>
 
-
-### Previsão de conclusão: 10/01/2024
+### Previsão de conclusão: 10/jan/2024
