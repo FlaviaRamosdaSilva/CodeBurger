@@ -29,7 +29,8 @@
 <li>Aprendi sobre conceito de JWT e como configurar o token do usuário para verificação ao acessar algumas páginas</li>
 <li>Realizamos o relacionamento entre tabelas, já que estamos utiizando o PostgreSQL</li>
 <li>Aprendi a realizar a excusão e inserção de uma nova coluna dentro da tabela</li>
-<li>Atualmente inserindo o MongoDB para o item de pedidos</li>
+<li>Atualmente inserindo o MongoDB para o item de pedidos
+<li>Inserimos a configuração do Corns para iniciar a conexão com o Front</li>
 <br>
 <br>
 <p>O FrontEnd esta em outro repositório</p>
