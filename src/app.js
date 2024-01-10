@@ -7,9 +7,10 @@ import cors from 'cors'
 class App {
   constructor() {
     this.app = express(); // guardamos o express dentro da variável e exportamos ela por meio do this
+    this.app.use(cors()) //habilitado o cors para conseguir linkar back e front
     this.middlewares(); // avisamos que utilizaremos toda a aplicação pelo método JSON
     this.routes(); // deixamos nossas rotas disponíveis para rodar assim que inicia a aplicação
-    this.app.use(cors()) //habilitado o cors para conseguir linkar back e front
+   
   }
 
   middlewares() {
