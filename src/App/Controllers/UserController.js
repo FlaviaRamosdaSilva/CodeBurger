@@ -50,4 +50,4 @@ class UserController{
 
 export default new UserController()
 
-console.log(UserController)
+
