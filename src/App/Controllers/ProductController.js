@@ -1,14 +1,22 @@
 import * as Yup from 'yup'
-import Product from '../models/Product'
 import Category from '../models/Category'
+import Product from '../models/Product'
 import User from '../models/User'
-import { where } from 'sequelize'
 //validação dos dados que vão chegar
 class ProductController {
     async store (request, response){
         const schema = Yup.object().shape({ //formato do objeto abaixo:
             name: Yup.string().required(),
-            price: Yup.number().required(),
+            price: Yup.mixed()
+                .transform((originalValue) => {
+                if (typeof originalValue === 'string') {
+                // Transforma a string para um número (substitui ',' por '.')
+                return parseFloat(originalValue.replace(',', '.'));
+                }
+                return originalValue;
+                })
+                .test('is-number', 'O preço deve ser um número válido', (value) => !isNaN(value))
+                .required('O preço é obrigatório'),
             category_id: Yup.number().required(), //após criar o relacionamento, alteramos o "category: Yup.string()" para "category_id: YUP.number"
             offer: Yup.boolean(), //não é obrigatório, informa se o produto está em oferta ou não
         })

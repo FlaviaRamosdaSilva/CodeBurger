@@ -4,7 +4,7 @@ class Product extends Model {
     static init(sequelize){
         super.init({  //campo Id é gerado automaticamente por isso não está aqui
             name: Sequelize.STRING,
-            price: Sequelize.INTEGER,
+            price: Sequelize.DECIMAL(10, 2), // Defina a precisão e escala conforme necessário
             // category: Sequelize.STRING, // excluímos este item e para fazer o relacionamento desse item com outra tabela 
             path: Sequelize.STRING,
             offer: Sequelize.BOOLEAN,
