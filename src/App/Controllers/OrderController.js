@@ -1,8 +1,8 @@
 import * as Yup from 'yup'
-import Product from '../models/Product'
 import Category from '../models/Category'
-import Order from '../schemas/Order'
+import Product from '../models/Product'
 import User from '../models/User'
+import Order from '../schemas/Order'
 
 class OrderController{
     async store(request, response){
@@ -64,7 +64,7 @@ class OrderController{
             name: request.userName, // como modificamos o auth(middleware) vamos buscar o name também do token
         },
         products: editedProducts, //aqui vamos retornar no pedido os produtos que editamos na variável anterior
-        status: "pedido realizado", // aqui vamos retornar o status, o primeiro que será pedido realizado.
+        status: "Pedido realizado", // aqui vamos retornar o status, o primeiro que será pedido realizado.
     }
 
     const orderResponse = await Order.create(order) //aqui criamos uma variável para criar uma ordem indo no schema Order e usando o create com base nas info que colocamos na order acima
