@@ -2,16 +2,20 @@ import { Router } from "express";
 import multer from "multer";
 import multerConfig from "./config/multer";
 
-import UserController from "./App/Controllers/UserController";
-import SessionController from "./App/Controllers/SessionController";
-import ProductController from "./App/Controllers/ProductController";
 import CategoryController from "./App/Controllers/CategoryController";
-import authMiddleware from "./App/middleware/auth"; // importando o Middleware de autenticação
 import OrderController from "./App/Controllers/OrderController";
+import ProductController from "./App/Controllers/ProductController";
+import SessionController from "./App/Controllers/SessionController";
+import UserController from "./App/Controllers/UserController";
+import authMiddleware from "./App/middleware/auth"; // importando o Middleware de autenticação
 
 const upload = multer(multerConfig) // criamos a variável com o Multer + config que criamos ao usar o Multer e vamos usa-la na rota dos produtos
 
 const routes = new Router(); // importado conforme a documentação do Express
+
+routes.get("/", (req, res) => {
+    return res.json({ message: 'Deploy succssesfully done'})
+})
 
 routes.post("/users", UserController.store)
 routes.post("/sessions", SessionController.store)
