@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('users', {
 
       id: {  //abaixo as especificações do ID
         type: Sequelize.UUID, // verificar na documentação do sequelize
@@ -30,11 +30,11 @@ module.exports = {
         defaultValue: false, //se não mandar informação nenhuma o valor dele vai ser falso
         allowNull: false, //esse campo não pode ser nulo (admin)
       },
-      createdAt: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false
       },
-      updatedAt: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false
       }
@@ -44,6 +44,6 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('users');
   }
 };
