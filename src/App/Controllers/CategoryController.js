@@ -29,6 +29,7 @@ class CategoryController {
         const categoryExists = await Category.findOne({  // procurar se a categoria que tá ali já existe, para não cadastrar repetido
             where: { name }, //se ele não acha ele retorna com null e daí cai no if.
         })
+        console.log(Category)
         if (categoryExists){
            return response.status(400).json({ error: 'Category already exists'}) // erro avisando que já existe
         }

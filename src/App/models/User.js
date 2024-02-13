@@ -1,5 +1,5 @@
-import Sequelize, { Model } from 'sequelize'
 import bcrypt from 'bcrypt'
+import Sequelize, { Model } from 'sequelize'
 
 class User extends Model { // extends = estendendo a class model dentro da classe Use; colocamos a palavra "super"
 //na frente de um parâmetro que usamos na classe pai (classe que estendemos para essa que criamos agora)

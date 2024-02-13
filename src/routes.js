@@ -2,6 +2,7 @@ import { Router } from "express";
 import multer from "multer";
 import multerConfig from "./config/multer";
 
+import authMiddleware from "../src/App/middleware/auth";
 import CategoryController from "./App/Controllers/CategoryController";
 import OrderController from "./App/Controllers/OrderController";
 import ProductController from "./App/Controllers/ProductController";
@@ -19,7 +20,7 @@ routes.get("/", (req, res) => {
 routes.post("/users", UserController.store)
 routes.post("/sessions", SessionController.store)
 
-// routes.use(authMiddleware) // todas as rotas que tiverem abaixo disso (aqui no código) vão receber meu Middleware e será autenticado
+routes.use(authMiddleware ) // todas as rotas que tiverem abaixo disso (aqui no código) vão receber meu Middleware e será autenticado
 
 routes.post("/products", upload.single("file"), ProductController.store) //single por que vamos deixar fazer upload de apenas um arquivo / single pede um nome em string
 //nesta rota vamos juntar o multer e o Productcontroller para que no insomnia nós adicionarmos
