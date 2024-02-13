@@ -2555,7 +2555,7 @@ pg-connection-string@^2.6.1, pg-connection-string@^2.6.2:
 
 pg-hstore@^2.3.4:
   version "2.3.4"
-  resolved "https://registry.npmjs.org/pg-hstore/-/pg-hstore-2.3.4.tgz"
+  resolved "https://registry.npmjs.org/pg-hstore/-/pg-hstore-2.3.4.tgz#4425e3e2a3e15d2a334c35581186c27cf2e9b8dd"
   integrity sha512-N3SGs/Rf+xA1M2/n0JBiXFDVMzdekwLZLAO0g7mpDY9ouX+fDI7jS6kTq3JujmYbtNSJ53TJ0q4G98KVZSM4EA==
   dependencies:
     underscore "^1.13.1"
@@ -2588,7 +2588,7 @@ pg-types@^2.1.0:
 
 pg@^8.11.3:
   version "8.11.3"
-  resolved "https://registry.npmjs.org/pg/-/pg-8.11.3.tgz"
+  resolved "https://registry.npmjs.org/pg/-/pg-8.11.3.tgz#d7db6e3fe268fcedd65b8e4599cda0b8b4bf76cb"
   integrity sha512-+9iuvG8QfaaUrrph+kpF24cXkH1YOOUeArRNYIxq1viYHZagBxrTno7cecY1Fa44tJeZvaoG+Djpkc3JwehN5g==
   dependencies:
     buffer-writer "2.0.0"
