@@ -29,7 +29,7 @@ class UserController{
 
     try{
         const userExists = await User.findOne({  // procurar se o e-mail que tá ali já existe, para não cadastrar repetido
-            where: { email}, //se ele não acha ele retorna com null e daí cai no if.
+            where: { email }, //se ele não acha ele retorna com null e daí cai no if.
         })
         if (userExists){
            return response.status(409).json({ error: 'User already exists'})
