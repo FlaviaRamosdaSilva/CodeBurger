@@ -1,15 +1,15 @@
 {
   "name": "codeburger",
   "version": "1.0.0",
-  "description": "Site para pedidos e compras online para uma hamburgueria",
+  "description": "Site para pedidos e compras online para um restaurante de Sushi",
   "main": "src/server.js",
-  "scripts": {
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
     "dev:debug": "nodemon --inspect src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Flávia Ramos",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

@@ -21,7 +21,7 @@ class SessionController{
         const { email, password} = request.body
 
         const user = await User.findOne({  // procurar se o e-mail que tá ali já existe, para não cadastrar repetido
-            where: { email}, //se ele não acha ele retorna com null e daí cai no if.
+            where: { email }, //se ele não acha ele retorna com null e daí cai no if.
         })
         //caso o usuário de false (denovo usamos o ponto de exclamação pq o if aceita só o true e com o ! ele inverte para false)
         if (!user) return userEmailOrPasswordIncorrect() //ele vai retornar a função que eu criei lá em cima que é um retorno de error
