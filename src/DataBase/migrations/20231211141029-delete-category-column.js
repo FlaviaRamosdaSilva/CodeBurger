@@ -9,11 +9,8 @@ module.exports = {
 
   // Já o down, como é o contrário do up, vamos adicionar a coluna, caso algo acima de errado. pra isso vamos usar o addColumn;
   async down (queryInterface, Sequelize) {
-    await queryInterface.addColumn('products', 'category', {
-        type: Sequelize.STRING,
-        allowNull: true //campo nulo = não, todos tem que pertencer a uma categoria //tem que ser false
-    });
+    await queryInterface.addColumn('products', 'category', Sequelize.STRING)
+  },
+}
      // primeiro parâmetro do addColumn é a tabela em que vamos inserir a coluna e o 2a é como será a coluna.
      // para o 2a parâmetro, utilizamos as mesmas categorias inseridas na migration de creação dele.
-  }
-};
