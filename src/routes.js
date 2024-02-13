@@ -7,7 +7,6 @@ import OrderController from "./App/Controllers/OrderController";
 import ProductController from "./App/Controllers/ProductController";
 import SessionController from "./App/Controllers/SessionController";
 import UserController from "./App/Controllers/UserController";
-import authMiddleware from "./App/middleware/auth"; // importando o Middleware de autenticação
 
 const upload = multer(multerConfig) // criamos a variável com o Multer + config que criamos ao usar o Multer e vamos usa-la na rota dos produtos
 
@@ -20,7 +19,7 @@ routes.get("/", (req, res) => {
 routes.post("/users", UserController.store)
 routes.post("/sessions", SessionController.store)
 
-routes.use(authMiddleware) // todas as rotas que tiverem abaixo disso (aqui no código) vão receber meu Middleware e será autenticado
+// routes.use(authMiddleware) // todas as rotas que tiverem abaixo disso (aqui no código) vão receber meu Middleware e será autenticado
 
 routes.post("/products", upload.single("file"), ProductController.store) //single por que vamos deixar fazer upload de apenas um arquivo / single pede um nome em string
 //nesta rota vamos juntar o multer e o Productcontroller para que no insomnia nós adicionarmos
