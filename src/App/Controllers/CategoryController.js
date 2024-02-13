@@ -39,9 +39,12 @@ class CategoryController {
     }
 
     async index (request, response){
+        try {
         const categories = await Category.findAll() //procure todos as categorias dentro dessa variavel
-
         return response.json(categories)  // retorna todos as categorias
+    } catch (error) {
+        return response.status(500).json({ error: 'Internal server error' });
+    }    
     }
 
     async update (request, response){

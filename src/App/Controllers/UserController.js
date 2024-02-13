@@ -6,8 +6,8 @@ update  => Atualizar
 delete  => Deletar
 */
 import { v4 } from "uuid"
-import User from "../models/User"
 import * as Yup from 'yup'
+import User from "../models/User"
 
 class UserController{
     async store(request, response){
@@ -27,6 +27,7 @@ class UserController{
 
         const {name, email, password, admin } = request.body
 
+    try{
         const userExists = await User.findOne({  // procurar se o e-mail que tá ali já existe, para não cadastrar repetido
             where: { email}, //se ele não acha ele retorna com null e daí cai no if.
         })
@@ -45,6 +46,10 @@ class UserController{
         })
 
         return response.status(201).json({ id: user.id, name, email, admin})
+    } catch (error) {
+        console.error("Error creating user:", error);
+        return response.status(500).json({ error: 'Internal server error' });
+    }
     }
 }
 
