@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('categories', {
+    await queryInterface.createTable('Categories', {
       id: { //copiamos do product
         type: Sequelize.INTEGER, // número inteiro
         allowNull: false, //campo nulo = não
@@ -15,11 +15,11 @@ module.exports = {
         allowNull: false, //campo nulo = não, todos tem que ter nome
         unique: true, // tem que ser único, não pode ter outra categoria
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false 
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false
       },
@@ -27,6 +27,6 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    await queryInterface.dropTable('categories')
+    await queryInterface.dropTable('Categories')
    }
  };
