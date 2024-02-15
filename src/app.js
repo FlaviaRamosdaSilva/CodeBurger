@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import Database from './database';
 import routes from "./routes";
 
-const db = new Database(); // Instanciando a classe Database
+console.log(Database)
 class App {
   constructor() {
     this.app = express(); // guardamos o express dentro da variável e exportamos ela por meio do this
@@ -15,9 +15,9 @@ class App {
 
   middlewares() {
     this.app.use(express.json());
-    this.app.use('/product-file', express.static(resolve(__dirname, "..", "uploads")))
+    this.app.use('/product-file', express.static(resolve(__dirname, "..", "uploads")));
     //quando alguem acessar a rota productfile vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
-    this.app.use('/category-file', express.static(resolve(__dirname, "..", "uploads")))
+    this.app.use('/category-file', express.static(resolve(__dirname, "..", "uploads")));
     //quando alguem acessar a rota category-file vc vai permitir que a pessoa terão acesso a arquivos estaticos dentro da minha aplicação + diretorio em que estão os arquivos
   }
 
