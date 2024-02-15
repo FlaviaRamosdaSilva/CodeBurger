@@ -2,6 +2,7 @@ import cors from 'cors';
 import express from "express";
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
+import './database/index.mjs';
 import routes from "./routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
