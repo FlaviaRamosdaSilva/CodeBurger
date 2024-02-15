@@ -1,10 +1,13 @@
 import cors from 'cors';
 import express from "express";
-import { resolve } from 'path';
-import Database from './database';
-import routes from "./routes";
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+import Database from './database/index.js';
+import routes from "./routes.js";
 
 console.log(Database)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 class App {
   constructor() {
     this.app = express(); // guardamos o express dentro da variável e exportamos ela por meio do this

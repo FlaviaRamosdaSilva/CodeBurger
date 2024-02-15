@@ -1,13 +1,13 @@
 import { Router } from "express";
 import multer from "multer";
-import multerConfig from "./config/multer";
+import multerConfig from "./config/multer.js";
 
-import authMiddleware from "../src/App/middleware/auth";
-import CategoryController from "./App/Controllers/CategoryController";
-import OrderController from "./App/Controllers/OrderController";
-import ProductController from "./App/Controllers/ProductController";
-import SessionController from "./App/Controllers/SessionController";
-import UserController from "./App/Controllers/UserController";
+import authMiddleware from "../src/App/middleware/auth.js";
+import CategoryController from "./App/Controllers/CategoryController.js";
+import OrderController from "./App/Controllers/OrderController.js";
+import ProductController from "./App/Controllers/ProductController.js";
+import SessionController from "./App/Controllers/SessionController.js";
+import UserController from "./App/Controllers/UserController.js";
 
 const upload = multer(multerConfig) // criamos a variável com o Multer + config que criamos ao usar o Multer e vamos usa-la na rota dos produtos
 

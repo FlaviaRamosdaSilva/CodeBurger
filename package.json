@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Site para pedidos e compras online para um restaurante de Sushi",
   "main": "src/server.js",
+  "type": "module",
   "engines": {
   "node": "18.x"
   },

@@ -1,5 +1,5 @@
-import  Jwt  from "jsonwebtoken";
-import auth from "../../config/auth";
+import Jwt from "jsonwebtoken";
+import auth from "../../config/auth.js";
 
 export default (request, response, next) => {
     const authToken = request.headers.authorization  // aqui pegamos o token que veio dentro do insomnia pra ver se tem um token

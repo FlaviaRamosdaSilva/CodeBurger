@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 import Sequelize from 'sequelize'
 
 
-import Category from '../App/models/Category'
-import Product from '../App/models/Product'
-import User from '../App/models/User'
+import Category from '../App/models/Category.js'
+import Product from '../App/models/Product.js'
+import User from '../App/models/User.js'
 
 const models = [User, Product, Category] // colocamos todos models dentro de um array para facilitar; dentro das funções colocamos models pra não precisar fazer um de cada model
 
