@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "type": "module",
   "engines": {
-  "node": "18.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node src/server.js",
@@ -40,6 +40,6 @@
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
     "sequelize-cli": "^6.6.2",
-    "sucrase": "^3.34.0"
+    "sucrase": "^3.35.0"
   }
 }
