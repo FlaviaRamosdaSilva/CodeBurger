@@ -1,16 +1,16 @@
 import cors from 'cors';
 import express from "express";
 import { resolve } from 'path';
-import './database/index.js';
+import Database from './database';
 import routes from "./routes";
 
-
+const db = new Database(); // Instanciando a classe Database
 class App {
   constructor() {
     this.app = express(); // guardamos o express dentro da variável e exportamos ela por meio do this
     this.app.use(cors()) //habilitado o cors para conseguir linkar back e front
     this.middlewares(); // avisamos que utilizaremos toda a aplicação pelo método JSON
-    this.routes(); // deixamos nossas rotas disponíveis para rodar assim que inicia a aplicação  
+    this.routes(); // deixamos nossas rotas disponíveis para rodar assim que inicia a aplicação
   }
 
   middlewares() {
