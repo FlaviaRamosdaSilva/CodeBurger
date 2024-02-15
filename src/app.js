@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from "express";
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
-import Database from './database/index.js';
+import Database from './database/index.mjs';
 import routes from "./routes.js";
 
 console.log(Database)
