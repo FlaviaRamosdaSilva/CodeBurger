@@ -1,5 +1,5 @@
 {
-  "name": "codeburger",
+  "name": "codesushi",
   "version": "1.0.0",
   "description": "Site para pedidos e compras online para um restaurante de Sushi",
   "main": "server.js",
@@ -8,10 +8,10 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": " node server.js",
+    "start": " NODE_OPTIONS='--experimental-specifier-resolution=node' node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "dev:debug": "nodemon --inspect server.js"
+    "dev:debug": "nodemon --inspect src/server.js"
   },
   "keywords": [],
   "author": "Flávia Ramos",
