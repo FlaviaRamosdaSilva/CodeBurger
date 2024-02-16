@@ -1,3 +1,9 @@
+"start": " node src/server.js", //NODE_OPTIONS='--experimental-specifier-resolution=node'
+package.json
+
+
+
+
 import cors from 'cors';
 import express from "express";
 import { dirname, resolve } from 'path';
